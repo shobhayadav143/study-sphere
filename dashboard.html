@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StudySphere Dashboard</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<i class="fa-solid fa-graduation-cap"></i>
+StudySphere
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="dashboard.html" class="active">Dashboard</a>
+<a href="notes.html">Notes</a>
+<a href="todo.html">Todo</a>
+<a href="timer.html">Timer</a>
+<a href="documentation.html">Documentation</a>
+
+</nav>
+
+<button id="themeBtn">
+<i class="fa-solid fa-moon"></i>
+</button>
+
+</header>
+
+<section class="welcome">
+
+<h1 id="greeting">Welcome Student 👋</h1>
+
+<p id="date"></p>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+<i class="fa-solid fa-note-sticky"></i>
+<h2 id="notesCount">0</h2>
+<p>Notes</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-list-check"></i>
+<h2 id="taskCount">0</h2>
+<p>Tasks</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-clock"></i>
+<h2 id="studyTime">25</h2>
+<p>Minutes Goal</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-fire"></i>
+<h2>7</h2>
+<p>Study Streak</p>
+</div>
+
+</section>
+
+<section class="quote">
+
+<h2>Daily Motivation</h2>
+
+<p id="quoteText"></p>
+
+</section>
+
+<section class="progress">
+
+<h2>Today's Progress</h2>
+
+<div class="progress-bar">
+
+<div id="progressFill"></div>
+
+</div>
+
+<p id="progressText">0%</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 StudySphere</p>
+
+</footer>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

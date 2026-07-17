@@ -1,0 +1,377 @@
+/* ==========================================
+   StudySphere Pomodoro Timer CSS
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+:root{
+
+    --primary:#2563eb;
+    --secondary:#1d4ed8;
+
+    --bg:#f4f7fb;
+    --card:#ffffff;
+    --text:#222;
+
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+body{
+
+    background:var(--bg);
+    color:var(--text);
+    transition:.3s;
+
+}
+
+body.dark{
+
+    --bg:#0f172a;
+    --card:#1e293b;
+    --text:#ffffff;
+    --shadow:0 10px 25px rgba(255,255,255,.05);
+
+}
+
+/* ================= Header ================= */
+
+header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:white;
+
+    box-shadow:var(--shadow);
+
+    position:sticky;
+    top:0;
+    z-index:999;
+
+}
+
+body.dark header{
+
+    background:#0f172a;
+
+}
+
+.logo{
+
+    font-size:28px;
+    font-weight:700;
+    color:var(--primary);
+
+}
+
+.logo i{
+
+    margin-right:8px;
+
+}
+
+nav{
+
+    display:flex;
+    gap:25px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+    color:var(--text);
+    font-weight:500;
+    transition:.3s;
+
+}
+
+nav a:hover,
+nav .active{
+
+    color:var(--primary);
+
+}
+
+#themeBtn{
+
+    width:42px;
+    height:42px;
+
+    border:none;
+    border-radius:50%;
+
+    background:var(--primary);
+    color:white;
+
+    cursor:pointer;
+
+}
+
+/* ================= Timer ================= */
+
+.timer-section{
+
+    min-height:80vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+.timer-section h1{
+
+    color:var(--primary);
+    margin-bottom:10px;
+
+}
+
+.timer-section p{
+
+    margin-bottom:40px;
+    color:gray;
+
+}
+
+body.dark .timer-section p{
+
+    color:#cbd5e1;
+
+}
+
+.timer-box{
+
+    width:420px;
+
+    max-width:100%;
+
+    background:var(--card);
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.timer-box:hover{
+
+    transform:translateY(-8px);
+
+}
+
+#time{
+
+    font-size:70px;
+
+    color:var(--primary);
+
+    margin:25px 0;
+
+    letter-spacing:3px;
+
+}
+
+/* ================= Buttons ================= */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+}
+
+.buttons button{
+
+    border:none;
+
+    padding:14px 24px;
+
+    border-radius:10px;
+
+    background:var(--primary);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:15px;
+
+}
+
+.buttons button:hover{
+
+    background:var(--secondary);
+
+    transform:translateY(-3px);
+
+}
+
+/* ================= Session ================= */
+
+.timer-box h3{
+
+    margin-top:10px;
+    color:gray;
+
+}
+
+body.dark .timer-box h3{
+
+    color:#cbd5e1;
+
+}
+
+#sessionCount{
+
+    margin-top:15px;
+
+    color:#16a34a;
+
+    font-size:38px;
+
+}
+
+/* ================= Footer ================= */
+
+footer{
+
+    background:#111827;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+/* ================= Animation ================= */
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+#time{
+
+animation:pulse 2s infinite;
+
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:768px){
+
+header{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.timer-box{
+
+padding:30px;
+
+}
+
+#time{
+
+font-size:55px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+.buttons button{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.logo{
+
+font-size:24px;
+
+}
+
+.timer-section{
+
+padding:20px;
+
+}
+
+.timer-box{
+
+padding:25px;
+
+}
+
+#time{
+
+font-size:46px;
+
+}
+
+}

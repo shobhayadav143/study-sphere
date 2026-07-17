@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StudySphere | Todo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="todo.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<i class="fa-solid fa-graduation-cap"></i>
+StudySphere
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="notes.html">Notes</a>
+<a href="todo.html" class="active">Todo</a>
+<a href="timer.html">Timer</a>
+<a href="documentation.html">Documentation</a>
+
+</nav>
+
+<button id="themeBtn">
+<i class="fa-solid fa-moon"></i>
+</button>
+
+</header>
+
+<section class="todo-section">
+
+<h1>✅ Task Manager</h1>
+
+<div class="input-box">
+
+<input
+type="text"
+id="taskInput"
+placeholder="Enter Task">
+
+<select id="priority">
+
+<option value="High">High</option>
+<option value="Medium">Medium</option>
+<option value="Low">Low</option>
+
+</select>
+
+<input
+type="date"
+id="dueDate">
+
+<button id="addTask">
+
+Add Task
+
+</button>
+
+</div>
+
+<h3 id="progressText">
+
+Completed : 0 / 0
+
+</h3>
+
+<div id="taskContainer">
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 StudySphere
+
+</p>
+
+</footer>
+
+<script src="todo.js"></script>
+
+</body>
+
+</html>

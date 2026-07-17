@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudySphere | Student Productivity Hub</title>
+
+    <meta name="description"
+        content="StudySphere is a student productivity hub featuring notes, task planner, Pomodoro timer, and responsive dashboard.">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= Loader ================= -->
+
+    <div id="loader" aria-hidden="true">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- ================= Header ================= -->
+
+    <header>
+
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>StudySphere</span>
+        </div>
+
+        <nav>
+            <ul id="menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="todo.html">Todo</a></li>
+                <li><a href="timer.html">Timer</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-icons">
+            <button id="themeBtn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button id="menuBtn" aria-label="Open Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+    </header>
+
+    <!-- ================= Main ================= -->
+
+    <main>
+
+        <!-- ================= Hero ================= -->
+
+        <section class="hero">
+
+            <div class="hero-left">
+
+                <h1>
+                    Boost Your Learning with
+                    <span>StudySphere</span>
+                </h1>
+
+                <p>
+                    Your all-in-one productivity platform for students.
+                    Organize notes, manage daily tasks, and stay focused with a
+                    built-in Pomodoro timer.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="dashboard.html" class="btn">
+                        Explore Dashboard
+                    </a>
+
+                    <a href="documentation.html" class="btn outline">
+                        About Project
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-right">
+                <i class="fa-solid fa-book-open-reader hero-icon"></i>
+            </div>
+
+        </section>
+
+        <!-- ================= Features ================= -->
+
+        <section class="features">
+
+            <h2>Key Features</h2>
+
+            <div class="feature-grid">
+
+                <div class="card">
+                    <i class="fa-solid fa-note-sticky"></i>
+                    <h3>Notes Manager</h3>
+                    <p>
+                        Create, edit and search your notes with Local Storage support.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-list-check"></i>
+                    <h3>Task Planner</h3>
+                    <p>
+                        Manage daily tasks and track your productivity.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-clock"></i>
+                    <h3>Pomodoro Timer</h3>
+                    <p>
+                        Stay focused using a built-in study timer.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h3>Responsive Design</h3>
+                    <p>
+                        Works perfectly on desktop, tablet and mobile devices.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Why Choose ================= -->
+
+        <section class="why">
+
+            <h2>Why Choose StudySphere?</h2>
+
+            <div class="why-container">
+
+                <div class="why-card">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h3>Fast</h3>
+                    <p>
+                        Pure HTML, CSS and JavaScript with excellent performance.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <i class="fa-solid fa-shield"></i>
+                    <h3>Secure</h3>
+                    <p>
+                        Your data stays in your browser using Local Storage.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <i class="fa-solid fa-palette"></i>
+                    <h3>Modern UI</h3>
+                    <p>
+                        Clean interface with Dark Mode support.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ================= Footer ================= -->
+
+    <footer>
+        <p>
+            &copy; <span id="year"></span> StudySphere | Frontend Web Development Project
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+
+    <!-- Current Year -->
+    <script>
+        window.onload = function() {
+            document.getElementById("year").textContent = new Date().getFullYear();
+        };
+        </script>
+
+</body>
+</html>
